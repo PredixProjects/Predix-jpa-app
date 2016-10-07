@@ -1,0 +1,13 @@
+Manifest-Version: 1.0
+Implementation-Title: Spring Boot Data JPA Sample
+Implementation-Version: 1.0.0
+Archiver-Version: Plexus Archiver
+Built-By: Puneet.Negi
+Start-Class: com.ge.predix.labs.data.jpa.Application
+Implementation-Vendor-Id: com.ge.predix.labs
+Spring-Boot-Version: 1.2.3.RELEASE
+Created-By: Apache Maven 3.3.9
+Build-Jdk: 1.8.0_66
+Implementation-Vendor: Predix
+Main-Class: org.springframework.boot.loader.JarLauncher
+

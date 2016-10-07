@@ -50,4 +50,9 @@ public class CustomerApiController {
         customerService.updateCustomer(id, customer.getName(), customer.getPhone(), customer.getTStamp());
         return id;
     }
+    
+    @RequestMapping(value = "insertData", method = RequestMethod.POST)
+    public void updateCustomer(@RequestBody String sqlQuery) {
+        customerService.insertData(sqlQuery);
+    }
 }

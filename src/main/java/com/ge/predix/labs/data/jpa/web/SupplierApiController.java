@@ -7,24 +7,24 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
-import com.ge.predix.labs.data.jpa.domain.ProductData;
-import com.ge.predix.labs.data.jpa.service.ProductService;
+import com.ge.predix.labs.data.jpa.domain.Supplier;
+import com.ge.predix.labs.data.jpa.service.SupplierService;
 
 @ComponentScan
 @RestController
 public class SupplierApiController {
 
-    @Autowired  private ProductService productDataService;
+    @Autowired  private SupplierService supplierService;
 
-    public static final String PRODUCTDATA = "/productData";
-    public static final String SEARCH_PRODUCTDATA = "/searchProductData";
+    public static final String SUPPLIER = "/supplier";
+    public static final String SEARCH_SUPPLIER = "/searchSupplier";
 
 
 
-    @RequestMapping(value = PRODUCTDATA, method = RequestMethod.GET)
-    public Collection<ProductData> productData() throws Exception {
-        Collection<ProductData> productData = productDataService.getAllProduct();
-        return productData;
+    @RequestMapping(value = SUPPLIER, method = RequestMethod.GET)
+    public Collection<Supplier> productData() throws Exception {
+        Collection<Supplier> supplier = supplierService.getAllSuppliers();
+        return supplier;
     }
 
 }

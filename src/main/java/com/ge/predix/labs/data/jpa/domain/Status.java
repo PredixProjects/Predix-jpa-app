@@ -16,8 +16,12 @@ public class Status implements Serializable {
 	private static final long serialVersionUID = 1500516986755256732L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer inoiceId;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+	int statusId;
+
+	@ManyToOne
+	@JoinColumn(name = "invoiceId")
+    private Invioce invioce;
     @NotNull
     private String invoiceStatus;
     @NotNull
@@ -25,17 +29,7 @@ public class Status implements Serializable {
     @NotNull
     private Date statusToDate;
     
-	@ManyToOne
-	@JoinColumn(name = "holdId")
-    private InvoiceHold invoiceHold;
-
-	public Integer getInoiceId() {
-		return inoiceId;
-	}
-
-	public void setInoiceId(Integer inoiceId) {
-		this.inoiceId = inoiceId;
-	}
+    private String invoiceHold;
 
 	public String getInvoiceStatus() {
 		return invoiceStatus;
@@ -61,11 +55,20 @@ public class Status implements Serializable {
 		this.statusToDate = statusToDate;
 	}
 
-	public InvoiceHold getInvoiceHold() {
+	public String getInvoiceHold() {
 		return invoiceHold;
 	}
 
-	public void setInvoiceHold(InvoiceHold invoiceHold) {
+	public void setInvoiceHold(String invoiceHold) {
 		this.invoiceHold = invoiceHold;
 	}
+	
+	public int getStatusId() {
+		return statusId;
+	}
+
+	public void setStatusId(int statusId) {
+		this.statusId = statusId;
+	}
+
 }

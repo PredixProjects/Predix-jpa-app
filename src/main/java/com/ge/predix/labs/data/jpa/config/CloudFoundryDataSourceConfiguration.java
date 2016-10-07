@@ -16,8 +16,6 @@ import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.core.RedisTemplate;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 
-import com.ge.predix.labs.data.jpa.domain.Customer;
-
 @SuppressWarnings("deprecation")
 @Configuration
 public class CloudFoundryDataSourceConfiguration extends AbstractCloudConfig  {

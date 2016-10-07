@@ -18,7 +18,7 @@ public class InvioceService {
 
     @Transactional(readOnly = true)
     public List<Invioce> getAllInvioce() {
-        return em.createQuery("FROM Invoice").getResultList();
+        return em.createQuery("FROM Invioce").getResultList();
     }
 
     @Transactional(readOnly = true)

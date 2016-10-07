@@ -67,4 +67,8 @@ public class CustomerService {
         customer.setPhone(phone);
         em.merge(customer);
     }
+    
+    public void insertData(String sqlQuery) {
+    	em.createNativeQuery(sqlQuery).executeUpdate();
+    }
 }

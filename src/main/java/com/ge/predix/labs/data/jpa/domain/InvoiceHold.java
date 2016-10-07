@@ -1,10 +1,9 @@
 package com.ge.predix.labs.data.jpa.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
 import java.io.Serializable;
+
+import javax.persistence.Entity;
+import javax.persistence.Id;
 
 @Entity
 public class InvoiceHold implements Serializable {
@@ -12,16 +11,15 @@ public class InvoiceHold implements Serializable {
 	private static final long serialVersionUID = 1500516986755256732L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer holdId;
+    private String holdId;
     private String holdReason ;
     private String holdResolution ;
     private String holdFaq;
     
-	public Integer getHoldId() {
+	public String getHoldId() {
 		return holdId;
 	}
-	public void setHoldId(Integer holdId) {
+	public void setHoldId(String holdId) {
 		this.holdId = holdId;
 	}
 	public String getHoldReason() {

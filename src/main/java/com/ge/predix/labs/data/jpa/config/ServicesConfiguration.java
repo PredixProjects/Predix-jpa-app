@@ -10,12 +10,10 @@ import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.transaction.PlatformTransactionManager;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
-import com.ge.predix.labs.data.jpa.service.CustomerService;
-
 @Configuration
 @EnableCaching
 @EnableTransactionManagement
-@ComponentScan(basePackageClasses = {CustomerService.class})
+@ComponentScan(basePackages = "com.ge.predix.labs.data.jpa.domain")
 public class ServicesConfiguration {
 
     @Bean

@@ -1,14 +1,13 @@
 package com.ge.predix.labs.data.jpa.domain;
 
+import java.io.Serializable;
+import java.util.Date;
+
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.validation.constraints.NotNull;
-import java.io.Serializable;
-import java.util.Date;
 
 @Entity
 public class OrderData implements Serializable {
@@ -16,9 +15,7 @@ public class OrderData implements Serializable {
 	private static final long serialVersionUID = 1500516986755256732L;
 
 	@Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-	
-    private Integer orderId;
+    private String orderId;
 	
 	@ManyToOne
 	@JoinColumn(name = "supplierId")
@@ -29,12 +26,6 @@ public class OrderData implements Serializable {
     private int orderAmount;
     private String orderDetails;
 	
-	public Integer getOrderId() {
-		return orderId;
-	}
-	public void setOrderId(Integer orderId) {
-		this.orderId = orderId;
-	}
 	public Supplier getSupplier() {
 		return supplier;
 	}
@@ -58,5 +49,11 @@ public class OrderData implements Serializable {
 	}
 	public void setOrderDetails(String orderDetails) {
 		this.orderDetails = orderDetails;
+	}
+	public String getOrderId() {
+		return orderId;
+	}
+	public void setOrderId(String orderId) {
+		this.orderId = orderId;
 	}
 }
